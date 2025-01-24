@@ -1,0 +1,34 @@
+@@include('./html/head.html', {
+"title":"Ошибка 404",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky _noanimate",
+})
+
+<main class="error-main">
+     <section class="section error-hero">
+         <div class="section__container _container">
+               <div class="section__body">
+                   <div>
+                      <h1>
+                         <span>Ничего не найдено</span>
+                        x
+                    </h1>
+                    <a href="/" class="_btn ">
+                        вернуться на главную
+                    </a>
+                </div>
+                <img src="img/icons/error.svg" alt="">
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html', {
+"class":"error-footer",
+})
+
+
+@@include('./html/scripts.html')
+
