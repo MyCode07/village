@@ -17,6 +17,26 @@
     }
 }
 
+.section {
+
+    // .section__container
+
+    &__container {}
+
+    // .section__body
+
+    &__body {
+
+        h2 {
+            margin-bottom: 36px;
+
+            @media (max-width:1024px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
 .steps {
 
     .section__flex {
@@ -183,13 +203,11 @@
     }
 
     .section__flex-left {
-        height: 100%;
         display: flex;
         flex-direction: column;
 
         img,
         picture {
-            height: 100%;
             width: 100%;
             border-radius: 10px;
             overflow: hidden;
@@ -199,8 +217,6 @@
 
             @media (max-width:1024px) {
                 margin-top: 15px;
-                @include adaptive-value('height', 600, 365, 1);
-
             }
         }
 
@@ -208,6 +224,8 @@
             font-weight: 500;
             line-height: 1.6;
             @include adaptive-value('font-size', 22, 14, 1);
+            @include adaptive-value('margin-bottom', 45, 15, 1);
+
 
 
             label {
@@ -247,6 +265,7 @@
 
         ._btn {
             margin-top: 40px;
+            width: 73%;
             @include adaptive-value('font-size', 20, 14, 1);
 
             @media (max-width:1024px) {
@@ -466,8 +485,7 @@
 
     .grid {
         @media (min-width:1025px) {
-            grid-template-columns: auto auto auto auto;
-            gap: 36px;
+            grid-template-columns: repeat(4, 1fr);
             @include adaptive-value('gap', 36, 10, 1);
         }
 
@@ -497,15 +515,14 @@
 
 
         @media (min-width:1025px) {
-            aspect-ratio: 1/2;
+            // aspect-ratio: 1/2;
             grid-column: span 2;
-            grid-row: 1/ span 2;
+            grid-row: span 2;
         }
 
         @media (max-width:1024px) {
             flex: 0 0 auto;
             width: 370px;
-            padding-bottom: 50%;
         }
 
         img,
