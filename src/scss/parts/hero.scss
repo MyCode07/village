@@ -1,0 +1,238 @@
+.section {
+
+    // .section__container
+
+    &__container {}
+
+    // .section__body
+
+    &__body {
+
+        h2 {
+            margin-bottom: 36px;
+
+            @media (max-width:1024px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.hero {
+    margin-top: 40px;
+
+    @media (max-width:1024px) {
+        margin-top: 20px;
+    }
+
+    // .hero__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 625px;
+        @include adaptive-value('gap', 45, 15, 1);
+
+        @media (max-width:1024px) {
+            display: block;
+            position: relative;
+            height: 520px;
+        }
+    }
+
+    // .hero__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        @media (max-width:1024px) {
+            padding: 10px;
+            color: $white;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        p {
+            position: relative;
+            z-index: 2;
+            @include adaptive-value('font-size', 27, 14, 1);
+            font-weight: 400;
+            line-height: 100%;
+            @include adaptive-value('margin-bottom', 44, 20, 1);
+
+        }
+
+        ._btn-stroke {
+            @media (max-width:1024px) {
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+
+    // .hero__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+
+        @media (max-width:1300px) {
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        li {
+            width: 100%;
+            background-color: $gray;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-transform: uppercase;
+
+            @media (max-width:1024px) {
+
+                padding: 10px;
+                gap: 10px;
+                border-radius: 5px;
+            }
+
+            @media (max-width:425px) {
+                font-size: 9px;
+                line-height: 1.1;
+            }
+
+            img,
+            svg {
+                width: 34px;
+                height: 34px;
+
+                @media (max-width:1024px) {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+    // .hero__actions
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include adaptive-value('gap', 40, 5, 1);
+        position: relative;
+        z-index: 2;
+
+        @media (min-width:1025px) {
+            margin-bottom: 45px;
+        }
+
+        @media (max-width:1300px) and (min-width:1025px) {
+            flex-direction: column;
+        }
+
+        @media (max-width:1024px) {
+            margin-bottom: 20px;
+        }
+
+        a {
+            width: 100%;
+        }
+
+    }
+
+    // .hero__slider
+
+    &__slider {
+        height: 100%;
+
+        @media (min-width:1025px) {
+            width: 625px;
+            min-height: 660px;
+        }
+
+        @media (max-width:1024px) {
+            width: 100%;
+        }
+
+        .swiper {
+            position: relative;
+        }
+
+        .swiper,
+        .swiper-wrapper,
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .swiper-slide {
+            border-radius: 10px;
+            overflow: hidden;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                object-fit: cover;
+            }
+
+        }
+
+        .navigation {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 0;
+            z-index: 5;
+            width: 100%;
+            padding-inline: 20px;
+
+            @media (min-width:1025px) {
+                transform: translate(0, -50%);
+                top: 50%;
+
+            }
+
+            @media (max-width:1024px) {
+                bottom: 10px;
+            }
+
+        }
+    }
+
+    .pagination {
+        position: relative;
+        z-index: 2;
+
+        @media (min-width:1025px) {
+            display: none;
+        }
+    }
+
+}

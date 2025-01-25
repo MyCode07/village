@@ -4,19 +4,306 @@
 })
 
 @@include('./html/header.html',{"class":""})
- @@include('./html/loader.html')
 
 <main>
-    <section class="section hero">
-        <div class="section__image">
-            <img src="img/about.png" alt="">
-        </div>
-        <div class="section__container _container">
-            <div class="section__body">
 
+    <section class="hero hero" data-replace-width="1300">
+        <div class="hero__container _container">
+            <div class="hero__body" data-replace-new-position="afterend">
+                <div class="hero__content">
+                    <h1>
+                        <span>Ваш дом — ваша мечта,</span>
+                        воплощенная с командой Bounty Village
+                    </h1>
+                    <div>
+                        <p>Строим жилье в Краснодарском крае и Адыгеепо индивидуальному или готовому проекту</p>
+                        <div class="hero__actions" data-replace-old-position="afterend">
+                            <a href="" class="_btn _btn-fill">Обсудим ваш будущий дом?</a>
+                            <a href="" class="_btn _btn-stroke">рассчитать стоимость</a>
+                        </div>
+                        <ol class="hero__list" data-replace-element>
+                            <li>
+                                <img src="img/icons/firewall-green.svg" alt="">
+                                <span>Проектирование и строительство «Под Ключ» </span>
+                            </li>
+                            <li>
+                                <img src="img/icons/payment-green.svg" alt="">
+                                <span>ПОЛНОЕ ЮРИДИЧЕСКОЕ СОПРОВОЖДЕНИЕ</span>
+                            </li>
+                            <li>
+                                <img src="img/icons/briefcase-green.svg" alt="">
+                                <span>Строим <br> в ипотеку</span>
+                            </li>
+                        </ol>
+                        <div class="pagination"></div>
+                    </div>
+                </div>
+                <div class="hero__slider">
+                    <div class="swiper hero-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/hero-slider/slide-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/hero-slider/slide-2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/hero-slider/slide-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/hero-slider/slide-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <button class="prev">
+                                <img src="img/icons/slider-left-arrow.svg" alt="">
+                            </button>
+                            <button class="next">
+                                <img src="img/icons/slider-right-arrow.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="section steps">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>порядок работы</h2>
+                <div class="section__flex">
+                    <ol>
+                        <li>
+                            <img src="img/icons/step-1.svg" alt="">
+                            <span>консультация - ПРЕДВАРИТЕЛЬНЫЙРАССЧЕТ</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/step-2.svg" alt="">
+                            <span>СОГЛАСОВАНИЕ ПРОЕКТА</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/step-3.svg" alt="">
+                            <span>РАССЧЕТ СТОИМОСТИ ДОМА</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/step-4.svg" alt="">
+                            <span>заключение договора</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/step-5.svg" alt="">
+                            <span>строительство дома мечты</span>
+                        </li>
+                    </ol>
+                    <div class="steps__offers">
+                        <div>
+                            <img src="img/withproject.png" alt="">
+                            <h3>Есть готовый проект?</h3>
+                            <a href="" class="_btn _btn-fill">
+                                <span>отправьте его нам</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.676075 6.86997L11.9208 6.59106M11.9208 6.59106L6.27173 12.5275M11.9208 6.59106L5.98437 0.942018"
+                                        stroke="#F8F8F8" stroke-width="2.04512" />
+                                </svg>
+
+                            </a>
+                        </div>
+                        <div>
+                            <img src="img/noproject.png" alt="">
+                            <h3>нет проекта?</h3>
+                            <a href="" class="_btn _btn-fill">
+                                <span>отправьте его нам</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.676075 6.86997L11.9208 6.59106M11.9208 6.59106L6.27173 12.5275M11.9208 6.59106L5.98437 0.942018"
+                                        stroke="#F8F8F8" stroke-width="2.04512" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section calc">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <div class="section__flex-left">
+                        <h2>РАССЧИТАЙТЕ СТОИМОСТЬ ВАШЕГО БУДУЩЕГО ДОМА РОВНО ЗА 1 МИНУТУ !</h2>
+                        <p>Укажите параметры дома, и наш калькулятор моментально покажет <label>примерную
+                                стоимость.</label>
+                            <br>
+                            Это просто, быстро и бесплатно!
+                        </p>
+                        <img src="img/calc.png" alt="">
+                    </div>
+                    <div class="section__flex-right">
+                        <div class="calc__box">
+                            <h4>Выберите тип дома:</h4>
+                            <div>
+                                <label for="odnoetajny">
+                                    <span class="value">Одноэтажный</span>
+                                    <input id="odnoetajny" name="calc" type="radio" value="Одноэтажный">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="dvuhetajny">
+                                    <span class="value">Двухэтажный</span>
+                                    <input id="dvuhetajny" name="calc" type="radio" value="Одноэтажный">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="office">
+                                    <span class="value">Коммерция ( офис, магазин)</span>
+                                    <input id="office" name="calc" type="radio" value="Одноэтажный">
+                                    <span class="checkbox"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="calc__box _range-box">
+                            <h4>Площадь дома (м2)</h4>
+                            <div>
+                                <input type="range" class="range" min="1" max="500" value="1" class="range-input"
+                                    id="ploshad">
+                                <output class="bubble"></output>
+                                <p>
+                                    <span class="min"></span>
+                                    <span class="max"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="calc__box">
+                            <h4>Площадь дома (м2)</h4>
+                            <div>
+                                <select name="ploshad" id="cars">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calc__box">
+                            <h4>Дополнительно:</h4>
+                            <div class="grid">
+                                <label for="veranda">
+                                    <span class="value">Веранда</span>
+                                    <input id="veranda" name="dop" type="checkbox" value="Веранда">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="terassa">
+                                    <span class="value">Терраса</span>
+                                    <input id="terassa" name="dop" type="checkbox" value="Терраса">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="bassein">
+                                    <span class="value">Бассейн</span>
+                                    <input id="bassein" name="dop" type="checkbox" value="Бассейн">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="mangal">
+                                    <span class="value">Мангальная зона</span>
+                                    <input id="mangal" name="dop" type="checkbox" value="Мангальная зона">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="garaj">
+                                    <span class="value">Гараж</span>
+                                    <input id="garaj" name="dop" type="checkbox" value="Гараж">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="landshaft">
+                                    <span class="value">Ландшафтный дизайн</span>
+                                    <input id="landshaft" name="dop" type="checkbox" value="Ландшафтный дизайн">
+                                    <span class="checkbox"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="calc__box">
+                            <h4>Выберите тип отделки:</h4>
+                            <div>
+                                <label for="teplykontur">
+                                    <span class="value">Теплый контур ( без отделки)</span>
+                                    <input id="teplykontur" name="type" type="radio"
+                                        value="Теплый контур ( без отделки)">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="whitebox">
+                                    <span class="value"> White box ( предчистовая отделка)</span>
+                                    <input id="whitebox" name="type" type="radio"
+                                        value=" White box ( предчистовая отделка)">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label for="podklyuch">
+                                    <span class="value">Под ключ ( с ремонтом ) </span>
+                                    <input id="podklyuch" name="type" type="radio" value="Под ключ ( с ремонтом ) ">
+                                    <span class="checkbox"></span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <p>Примерная стоимость: <label>1 200 000</label><span> ₽</span></p>
+
+                        <a href="" class="_btn _btn-fill">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>наши проекты</h2>
+                <div class="grid">
+                    <a href class="sale">
+                        <img src="img/sale.png" alt="">
+                        <div>
+                            <p>узнай о сезонных акциях</p>
+                        </div>
+                    </a>
+                    <a href="" class="project-card">
+                        <img class="project-card__img" src="img/sale.png" alt="">
+
+                        <button><img src="img/icons//slider-right-arrow.svg" alt=""></button>
+                        <div>
+                            <h3>жилой комплексСтаврополь</h3>
+                        </div>
+                    </a>
+                    <a href="" class="project-card">
+                        <img class="project-card__img" src="img/sale.png" alt="">
+
+                        <button><img src="img/icons//slider-right-arrow.svg" alt=""></button>
+                        <div>
+                            <h3>жилой комплексСтаврополь</h3>
+                        </div>
+                    </a>
+                    <a href="" class="project-card">
+                        <img class="project-card__img" src="img/sale.png" alt="">
+
+                        <button><img src="img/icons//slider-right-arrow.svg" alt=""></button>
+                        <div>
+                            <h3>жилой комплексСтаврополь</h3>
+                        </div>
+                    </a>
+                    <a href="" class="project-card">
+                        <img class="project-card__img" src="img/sale.png" alt="">
+
+                        <button><img src="img/icons//slider-right-arrow.svg" alt=""></button>
+                        <div>
+                            <h3>жилой комплексСтаврополь</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 @@include('./html/footer.html')
