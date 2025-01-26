@@ -109,11 +109,6 @@ h6 {}
         border-radius: 4px;
     }
 
-    @media (max-width:425px) {
-        font-size: 8px;
-    }
-
-
     // ._btn-fill
 
     &-fill {
@@ -176,21 +171,30 @@ h6 {}
     align-items: center;
     justify-content: space-between;
 
-    button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        width: 34px;
-        height: 34px;
-        background-color: $gray;
 
-        img,
-        svg {
-            width: 12px;
-            height: 12px;
-            flex: 0 0 auto;
-            pointer-events: none;
-        }
+}
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background-color: $gray;
+    flex: 0 0 auto;
+
+    img,
+    svg {
+        width: 12px;
+        height: 12px;
+        flex: 0 0 auto;
+        pointer-events: none;
     }
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: auto;
 }

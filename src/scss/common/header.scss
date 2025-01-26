@@ -55,6 +55,7 @@
             width: 40px;
             height: 40px;
             flex: 0 0 auto;
+            border-radius: 50%;
         }
 
         img,
@@ -64,6 +65,20 @@
             height: 100%;
             object-fit: contain;
             pointer-events: none;
+
+            fill: $white;
+        }
+
+        .wh {
+            background-color: #23D266;
+        }
+
+        .tg {
+            background-color: #2DA5DF;
+        }
+
+        .yt {
+            background-color: #CD201F;
         }
     }
 

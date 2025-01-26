@@ -5,13 +5,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba($color: $black, $alpha: 0.75);
-    backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(13px);
+    background: $green;
     overflow: hidden;
     height: 0;
     pointer-events: none;
-    // transition: transform 1.2s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    padding: 40px 0;
+    opacity: 0;
 
     * {
         color: $white;
@@ -19,15 +18,97 @@
 
     &._open {
         pointer-events: all;
+        opacity: 1;
     }
 
-    [data-bottom] {
-        top: -25px;
-        opacity: 0;
+    // .menu__close
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        margin-left: auto;
+
+        span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 1px;
+            background-color: $white;
+
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:last-child {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
     }
 
-    [data-opacity] {
-        opacity: 0;
+    // .menu__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+        gap: 100px;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            font-size: 20px;
+        }
+    }
+
+    // .menu__contacts
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+        }
+
+        img,
+        svg,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+
+            fill: $white;
+        }
+
+        .wh {
+            background-color: #23D266;
+        }
+
+        .tg {
+            background-color: #2DA5DF;
+        }
+
+        .yt {
+            background-color: #CD201F;
+        }
+
     }
 
 }

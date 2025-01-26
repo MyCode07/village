@@ -4,6 +4,7 @@ import { replaceDomElements } from "./static/replace.js";
 // import { playVideoAction } from "./parts/video.js";
 // import SmoothScroll from "smoothscroll-for-websites";
 
+import "./static/accordeon.js";
 // import "./parts/forms.js";
 // import "./parts/qty.js";
 import "./parts/sliders.js";
@@ -30,10 +31,12 @@ replaceDomElements();
 // animateHiddenTextAction();
 // lineAnimationAction();
 
+accorden();
 
-// import { Fancybox } from "@fancyapps/ui";
-// Fancybox.bind("[data-fancybox]", {
-// });
+import { Fancybox } from "@fancyapps/ui";
+import { accorden } from "./static/accordeon.js";
+Fancybox.bind("[data-fancybox]", {
+});
 
 
 
