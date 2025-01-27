@@ -12,7 +12,17 @@ if (burger) {
     })
 
     menuClose.addEventListener('click', (e) => {
-        menu.classList.toggle('_open');
+        menu.classList.remove('_open');
         unLockPadding();
     })
+
+    const links = menu.querySelectorAll('nav a');
+    if (links.length) {
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('_open');
+                unLockPadding();
+            })
+        })
+    }
 }

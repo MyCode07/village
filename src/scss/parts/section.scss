@@ -526,6 +526,7 @@
         padding: 20px;
         border-radius: 10px;
         overflow: hidden;
+        gap: 20px;
 
 
         @media (min-width:1025px) {
@@ -537,6 +538,7 @@
         @media (max-width:1024px) {
             flex: 0 0 auto;
             width: 370px;
+            justify-content: space-between;
         }
 
         @media (any-hover: hover) {
@@ -574,11 +576,45 @@
 
             transition: all 0.3s ease 0s;
 
-            @include adaptive-value('font-size', 24, 14, 1);
+            @media (min-width:1025px) {
+                @include adaptive-value('font-size', 24, 14, 1);
+            }
 
             @media (max-width:1024px) {
                 border-radius: 10px;
                 padding: 15px;
+                font-size: 14px;
+            }
+        }
+
+        div {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            flex: 0 0 46px;
+            width: 46px;
+            height: 46px;
+            background-color: $white;
+            transition: all 0.3s ease 0s;
+
+            img,
+            svg,
+            picture {
+                width: 15px;
+                height: 15px;
+                stroke: $green;
+                stroke-width: 3px;
+                transition: all 0.3s ease 0s;
+            }
+
+            display: none;
+
+            @media (max-width:1024px) {
+                display: flex;
             }
         }
     }

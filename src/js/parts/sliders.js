@@ -16,6 +16,7 @@ if (sliders.length) {
                 slidesPerView: 1,
                 centeredSlides: true,
                 spaceBetween: 10,
+                grabCursor: true,
                 pagination: {
                     el: pagination,
                     clickable: true,

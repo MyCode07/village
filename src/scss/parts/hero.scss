@@ -12,10 +12,10 @@
         display: grid;
         grid-template-columns: 1fr 625px;
         @include adaptive-value('gap', 45, 15, 1);
+        position: relative;
 
         @media (max-width:1024px) {
             display: block;
-            position: relative;
             height: 520px;
         }
     }
@@ -29,7 +29,7 @@
 
 
         @media (max-width:1024px) {
-            padding: 10px;
+            padding: 12px 20px 77px 20px;
 
             position: absolute;
             left: 0;
@@ -203,36 +203,76 @@
 
         }
 
-        .navigation {
+
+
+        // .hero__slider-controls
+
+        &-controls {
             position: absolute;
+            right: 20px;
+            left: 20px;
+            bottom: 20px;
+            z-index: 2;
+
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            left: 0;
-            z-index: 5;
-            width: 100%;
-            padding-inline: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 17px;
 
-            @media (min-width:1025px) {
-                transform: translate(0, -50%);
-                top: 50%;
-
+            .pagination {
+                z-index: 2;
+                position: relative;
             }
 
-            @media (max-width:1024px) {
-                bottom: 10px;
+
+            .prev,
+            .next {
+                @media (min-width:1025px) {
+                    width: 60px;
+                    height: 60px;
+                    background-color: $black;
+
+                    img,
+                    svg {
+                        stroke: $white;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
 
+            .pagination {
+                @media (min-width:1025px) {
+                    gap: 20px;
+                }
+
+                span {
+                    @media (min-width:1025px) {
+
+                        background-color: $black;
+                        border: 0;
+                        width: 26px;
+                        height: 26px;
+
+                        &.swiper-pagination-bullet-active {
+                            background-color: $white;
+                        }
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    @media (max-width:1024px) {
+                        &:after {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
         }
+
+
     }
-
-    .pagination {
-        position: relative;
-        z-index: 2;
-
-        @media (min-width:1025px) {
-            display: none;
-        }
-    }
-
 }

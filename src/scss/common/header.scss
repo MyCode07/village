@@ -84,7 +84,7 @@
             @include adaptive-value('gap', 50, 0, 1);
 
             a {
-                color: $black;
+                color: #4e4e4e;
                 text-align: center;
                 @include adaptive-value('font-size', 25, 16, 1);
                 font-weight: 600;
