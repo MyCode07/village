@@ -1071,3 +1071,17 @@
         }
     }
 }
+
+.error-hero {
+    padding-top: 40px;
+
+    h1 {
+        text-align: center;
+    }
+
+    ._btn {
+        margin-inline: auto;
+        margin-top: 40px;
+        width: fit-content;
+    }
+}
