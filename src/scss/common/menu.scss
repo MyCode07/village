@@ -7,10 +7,11 @@
     height: 100%;
     background: $green;
     overflow: hidden;
-    height: 0;
     pointer-events: none;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     opacity: 0;
+
+    transition: opacity 0.3s ease 0s;
 
     * {
         color: $white;
@@ -36,6 +37,9 @@
             width: 30px;
             height: 1px;
             background-color: $white;
+
+            transition: all 0.3s ease 0s;
+            pointer-events: none;
 
             &:first-child {
                 transform: translate(-50%, -50%) rotate(45deg);
@@ -71,44 +75,7 @@
     // .menu__contacts
 
     &__contacts {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            flex: 0 0 auto;
-            border-radius: 50%;
-        }
-
-        img,
-        svg,
-        picture {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            pointer-events: none;
-
-            fill: $white;
-        }
-
-        .wh {
-            background-color: #23D266;
-        }
-
-        .tg {
-            background-color: #2DA5DF;
-        }
-
-        .yt {
-            background-color: #CD201F;
-        }
-
+        margin-inline: auto;
     }
 
 }

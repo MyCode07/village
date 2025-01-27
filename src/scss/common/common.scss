@@ -102,7 +102,7 @@ h6 {}
     text-transform: uppercase;
     white-space: nowrap;
 
-
+    transition: all 0.3s ease 0s;
 
     @media (max-width:1024px) {
         padding: 13px;
@@ -114,6 +114,12 @@ h6 {}
     &-fill {
         background-color: $green;
         color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $black;
+            }
+        }
     }
 
     // ._btn-stroke
@@ -125,6 +131,53 @@ h6 {}
         @media (max-width:425px) {
             border-width: 1px;
         }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $green;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+    }
+
+    img,
+    svg,
+    picture {
+        width: 55%;
+        height: 55%;
+        object-fit: contain;
+        pointer-events: none;
+
+        fill: $white;
+    }
+
+    .wh {
+        background-color: #23D266;
+    }
+
+    .tg {
+        background-color: #2DA5DF;
+    }
+
+    .yt {
+        background-color: #CD201F;
     }
 }
 

@@ -40,45 +40,8 @@
     // .header__contacts
 
     &__contacts {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
         @media (max-width:1024px) {
             display: none;
-        }
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            flex: 0 0 auto;
-            border-radius: 50%;
-        }
-
-        img,
-        svg,
-        picture {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            pointer-events: none;
-
-            fill: $white;
-        }
-
-        .wh {
-            background-color: #23D266;
-        }
-
-        .tg {
-            background-color: #2DA5DF;
-        }
-
-        .yt {
-            background-color: #CD201F;
         }
     }
 
@@ -120,14 +83,20 @@
             justify-content: center;
             @include adaptive-value('gap', 50, 0, 1);
 
-            li {
-                a {
-                    color: $black;
-                    text-align: center;
-                    @include adaptive-value('font-size', 25, 16, 1);
-                    font-weight: 600;
-                    line-height: 1;
-                    white-space: nowrap;
+            a {
+                color: $black;
+                text-align: center;
+                @include adaptive-value('font-size', 25, 16, 1);
+                font-weight: 600;
+                line-height: 1;
+                white-space: nowrap;
+
+                transition: opacity 0.3s ease 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        opacity: 0.5;
+                    }
                 }
             }
         }
@@ -150,6 +119,8 @@
             height: 2px;
             background-color: $black;
             transition: all 0.3s ease 0s;
+
+            pointer-events: none;
         }
 
         &._active {

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Thumbs, FreeMode, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -42,7 +42,7 @@ if (sliders.length) {
                     nextEl: next,
                 },
                 breakpoints: {
-                    390: {
+                    300: {
                         slidesPerView: 1,
                         spaceBetween: 10,
                     },
@@ -71,7 +71,7 @@ if (sliders.length) {
                     clickable: true,
                 },
                 breakpoints: {
-                    390: {
+                    300: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
@@ -87,37 +87,5 @@ if (sliders.length) {
 
             })
         }
-
-
-        // if (slider.closest('.stones')) {
-
-        //     const thumbs = new Swiper('.swiper[thumbsSlider]', {
-        //         modules: [
-        //             FreeMode
-        //         ],
-        //         freeMode: true,
-        //         watchSlidesProgress: true,
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 0,
-        //     });
-
-        //     new Swiper('.swiper.stones-slider', {
-        //         modules: [
-        //             Thumbs, Autoplay
-        //         ],
-        //         autoplay: {
-        //             delay: 5000,
-        //             pauseOnMouseEnter: true,
-        //         },
-        //         spaceBetween: 0,
-        //         slidesPerView: 1,
-        //         thumbs: {
-        //             swiper: thumbs,
-        //         },
-        //     });
-        // }
-
     })
 }
-
-
